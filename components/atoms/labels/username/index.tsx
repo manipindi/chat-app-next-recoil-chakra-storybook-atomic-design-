@@ -1,11 +1,19 @@
-import { Text } from '@chakra-ui/react'
-import React from 'react'
+import { Text } from "@chakra-ui/react";
+import React from "react";
 
-
-export default function UserName({username, ...rest}:any) {
+export default function UserName({
+  username,
+  fontSize,
+  fontWeight,
+  ...rest
+}: any) {
   return (
-    <Text {...rest} fontSize={"xl"} fontWeight="semibold">
-    {username}
-  </Text>
-  )
+    <Text
+      {...rest}
+      fontSize={fontSize ? fontSize : "xl"}
+      fontWeight={fontWeight ? fontWeight : "semibold"}
+    >
+      {username}
+    </Text>
+  );
 }

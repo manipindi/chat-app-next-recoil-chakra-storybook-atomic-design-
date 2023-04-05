@@ -1,5 +1,8 @@
 import type { Preview } from "@storybook/react";
 
+// const theme = require('../theme/theme');
+import { theme } from "../theme/theme";
+
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,6 +11,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    chakra: {
+      theme,
     },
   },
 };
