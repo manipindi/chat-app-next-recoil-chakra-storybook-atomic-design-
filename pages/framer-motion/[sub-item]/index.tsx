@@ -6,6 +6,7 @@ import styled from "styled-components";
 export const DefaultWrapper = styled.div`
   min-height: 100vh;
   display: flex;
+  /* padding: 5rem; */
   justify-content: center;
   align-items: center;
 `;

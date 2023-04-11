@@ -11,6 +11,10 @@ export default function FramerMotion() {
           <Link href={'/framer-motion/ball'}>Ball</Link>
           <Link href={'/framer-motion/list'}>List</Link>
           <Link href={'/framer-motion/moving-ball'}>Moving Ball</Link>
+          <Link href={'/framer-motion/layout-example'}>Layout</Link>
+          <Link href={'/framer-motion/example'}>Example</Link>
+          <Link href={'/framer-motion/scroll-example'}>Scroll Example</Link>
+          <Link href={'/framer-motion/scroll-triggered'}>Scroll Triggered</Link>
         </Flex>
     </DefaultWrapper>
   );
