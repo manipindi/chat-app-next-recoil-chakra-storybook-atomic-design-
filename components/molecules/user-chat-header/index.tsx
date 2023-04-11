@@ -1,12 +1,14 @@
-import UserName from "@/components/atoms/labels/username";
-import UserIcon from "@/components/atoms/user-icon";
-import { activeUserAtom } from "@/recoil/atoms/active-user/active-user-atom";
-import { Box, Text } from "@chakra-ui/react";
+import UserName from "../../../components/atoms/labels/username";
+import UserIcon from "../../../components/atoms/user-icon";
+import { Box } from "@chakra-ui/react";
 import React from "react";
-import { useRecoilValue } from "recoil";
 
-export default function UserChatHeader() {
-  const activeUser = useRecoilValue(activeUserAtom);
+interface UserHeaderProps {
+  activeUser : string,
+  src ?: string | HTMLImageElement | any
+}
+
+export default function UserChatHeader({activeUser, src}:UserHeaderProps) {
   return (
     <Box
       position="absolute"
@@ -19,7 +21,7 @@ export default function UserChatHeader() {
       p="0 30px"
       gap={"10px"}
     >
-      <UserIcon src={"https://bit.ly/dan-abramov"} name="Dan" size={"md"} />
+      <UserIcon src={src} name="Dan" size={"md"} />
       <UserName username={activeUser} />
     </Box>
   );

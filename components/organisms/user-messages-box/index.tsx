@@ -1,9 +1,9 @@
-import UserMessage from "@/components/molecules/user-message";
-import { userMsgsAtomFamily } from "@/recoil/atom-families/user-messages/user-msgs-atom-family";
-import { activeUserAtom } from "@/recoil/atoms/active-user/active-user-atom";
+import UserMessage from "../../../components/molecules/user-message";
+import { userMsgsAtomFamily } from "../../../recoil/atom-families/user-messages/user-msgs-atom-family";
+import { activeUserAtom } from "../../../recoil/atoms/active-user/active-user-atom";
 import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 
 export default function UserChatListContainer() {
   const activeUser = useRecoilValue(activeUserAtom);
@@ -20,7 +20,7 @@ export default function UserChatListContainer() {
       {!!activeUserMessages &&
         !!activeUserMessages.length &&
         activeUserMessages.map((eachMessage: any, idx: any) => (
-          <UserMessage key={idx} message={eachMessage.message} />
+          <UserMessage key={idx} icon={"https://bit.ly/dan-abramov"} message={eachMessage.message} />
         ))}
     </Flex>
   );

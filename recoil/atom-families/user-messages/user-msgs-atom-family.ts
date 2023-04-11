@@ -1,4 +1,4 @@
-import { localStorageEffect } from "@/recoil/atoms/users/users-atom";
+import { localStorageEffect } from "../../../recoil/atoms/users/users-atom";
 import { atomFamily } from "recoil";
 
 export const userMsgsAtomFamily = atomFamily({

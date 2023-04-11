@@ -1,5 +1,5 @@
-import { userMsgsAtomFamily } from "@/recoil/atom-families/user-messages/user-msgs-atom-family";
-import { activeUserAtom } from "@/recoil/atoms/active-user/active-user-atom";
+import { userMsgsAtomFamily } from "../../../recoil/atom-families/user-messages/user-msgs-atom-family";
+import { activeUserAtom } from "../../../recoil/atoms/active-user/active-user-atom";
 import { Box, Button, FormControl, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";

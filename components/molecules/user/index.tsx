@@ -20,7 +20,6 @@ export default function UserBox(props: any) {
     <Flex
       bg={user.username === activeUser ? "user-hover-bg" : "user-bg"}
       h="80px"
-      color="white"
       borderRadius={"md"}
       alignItems="center"
       p="10px 18px"

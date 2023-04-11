@@ -1,10 +1,12 @@
 import UserChatHeader from "@/components/molecules/user-chat-header";
 import UserChatInput from "@/components/molecules/user-chat-input";
 import UserChatListContainer from "@/components/organisms/user-messages-box";
+import { activeUserAtom } from "@/recoil/atoms/active-user/active-user-atom";
 import { Box } from "@chakra-ui/react";
 import React from "react";
-
+import { useRecoilValue } from "recoil";
 export default function ChatWindow() {
+  const activeUser = useRecoilValue(activeUserAtom);
   return (
     <Box
       w={`calc(100vw - 400px)`}
@@ -13,7 +15,7 @@ export default function ChatWindow() {
       minHeight={"100vh"}
       bg="app-bg"
     >
-        <UserChatHeader/>
+        <UserChatHeader src="https://bit.ly/dan-abramov" activeUser={activeUser}/>
         <UserChatListContainer/>
         <UserChatInput/>
     </Box>
