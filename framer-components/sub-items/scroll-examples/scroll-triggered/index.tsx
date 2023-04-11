@@ -40,7 +40,7 @@ export default function ScrollTriggered() {
         position={"relative"}
       >
         <Card />
-        <PopupCard  initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }}  transition={{duration:2}} viewport={{ once: true }}/>
+        <PopupCard  initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }}  transition={{type:"spring", stiffness:100}} viewport={{ once: true }}/>
       </Flex>
 
       <Flex
@@ -50,7 +50,7 @@ export default function ScrollTriggered() {
         position={"relative"}
       >
         <Card />
-        <PopupCard  initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }}  transition={{duration:2}} viewport={{ once: true }}/>
+        <PopupCard  initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }}  transition={{type:"spring", stiffness:100}} viewport={{ once: true }}/>
       </Flex>
 
       <Flex
@@ -60,7 +60,7 @@ export default function ScrollTriggered() {
         position={"relative"}
       >
         <Card />
-        <PopupCard initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }}  transition={{duration:2}} viewport={{ once: true }}/>
+        <PopupCard initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }}  transition={{type:"spring", stiffness:100}} viewport={{ once: true }}/>
       </Flex>
 
       <Flex
@@ -70,7 +70,7 @@ export default function ScrollTriggered() {
         position={"relative"}
       >
         <Card />
-        <PopupCard initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }} transition={{duration:2}} viewport={{ once: true }}/>
+        <PopupCard initial={{ opacity: 0, y:200 }} whileInView={{ opacity: 1, y:0 }} transition={{type:"spring", stiffness:100}} viewport={{ once: true }}/>
       </Flex>
     </Flex>
   );
