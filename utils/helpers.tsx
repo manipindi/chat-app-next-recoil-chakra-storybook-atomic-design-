@@ -3,6 +3,7 @@ import Example from "@/framer-components/sub-items/example";
 import LayoutShift from "@/framer-components/sub-items/layout-shift";
 import ListComponent from "@/framer-components/sub-items/list";
 import MovingBall from "@/framer-components/sub-items/moving-ball";
+import Reorder from "@/framer-components/sub-items/reorder";
 import ScrollExample from "@/framer-components/sub-items/scroll-examples/scroll-linked";
 import ScrollTriggered from "@/framer-components/sub-items/scroll-examples/scroll-triggered";
 import { ReactNode, cloneElement } from "react";
@@ -35,7 +36,9 @@ export const getRoute = (route: string): ReactNode => {
       case "scroll-example":
         return <ScrollExample />;
       case "scroll-triggered":
-        return <ScrollTriggered/>;
+        return <ScrollTriggered />;
+      case "reorder":
+        return <Reorder />;
     }
   } else <div />;
 };

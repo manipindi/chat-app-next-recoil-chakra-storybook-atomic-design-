@@ -1,12 +1,34 @@
 import UserIcon from "../../../components/atoms/user-icon";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import React from "react";
 
-export default function UserMessage({ message, icon }: any) {
+const variants = {
+  enter : {
+    opacity : 0,
+    y : 60,
+  },
+  visible : {
+    opacity : 1,
+    y : 0
+  },
+  exit: {
+    opacity : 0,
+    // y : 
+  }
+}
+
+export default function UserMessage({ message, icon, index, listlength }: any) {
+  console.log(index, listlength);
+
   return (
     <Flex
       as={motion.div}
+      key={message ? message : "empty"}
+      variants={variants}
+      initial={"enter"}
+      animate = {"visible"}
+      exit={"exit"}
       alignItems={"center"}
       gap="10px"
       justifyContent={"flex-end"}

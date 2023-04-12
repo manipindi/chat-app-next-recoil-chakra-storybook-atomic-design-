@@ -15,6 +15,7 @@ export default function FramerMotion() {
           <Link href={'/framer-motion/example'}>Example</Link>
           <Link href={'/framer-motion/scroll-example'}>Scroll Example</Link>
           <Link href={'/framer-motion/scroll-triggered'}>Scroll Triggered</Link>
+          <Link href={'/framer-motion/reorder'}>Reorder Example</Link>
         </Flex>
     </DefaultWrapper>
   );

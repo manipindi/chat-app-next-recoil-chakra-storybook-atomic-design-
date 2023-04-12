@@ -95,9 +95,9 @@ export default function ListComponent({ list, icon }: ListProps) {
           close: {
             clipPath: "inset(10% 50% 90% 50% round 10px)",
             transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
+              // type: "spring",
+              // bounce: 0,
+              // duration: 0.7,
             },
           },
         }}

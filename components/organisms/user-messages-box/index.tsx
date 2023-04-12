@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import UserMessage from "../../../components/molecules/user-message";
 import { userMsgsAtomFamily } from "../../../recoil/atom-families/user-messages/user-msgs-atom-family";
 import { activeUserAtom } from "../../../recoil/atoms/active-user/active-user-atom";
@@ -10,7 +10,7 @@ export default function UserChatListContainer() {
   const activeUser = useRecoilValue(activeUserAtom);
   const activeUserMessages = useRecoilValue(userMsgsAtomFamily(activeUser));
   return (
-    <Flex
+     <Flex
       flexDirection={"column"}
       gap="10px"
       h={`calc(100vh - 160px)`}
@@ -25,6 +25,7 @@ export default function UserChatListContainer() {
             key={idx}
             icon={"https://bit.ly/dan-abramov"}
             message={eachMessage.message}
+            index={idx}
           />
         ))}
     </Flex>
